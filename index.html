@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+    <section id="generatorSection">
+        <div>
+            <h1 class="title">Random Password Generator</h1>
+            <p class="undertitle">Create strong and secure passwords to keep your account safe online.</p>
+        </div>
+
+        <div id="generatedInfo">
+            <div id="inputInfo">
+                <input id="resultInput" type="text" placeholder="Password" readonly>
+                <span id="status">Very Strong</span>
+                <img onclick="regenerate()" src="./icons/rotate-right-solid.svg">
+            </div>
+
+            <button onclick="copy(this)">Copy!</button>
+        </div>
+        <div class="optionsWarper">
+            <h4>Password Length:</h4>
+            <div class="passwordLengthInputWarper">
+                <img onclick="changeLength()" src="./icons/minus-solid.svg">
+                <input onchange="regenerate()" id="passwordLengthInput" type="number" value="16" minlength="1" max="50">
+                <img onclick="changeLength(true)" src="./icons/plus-solid.svg">
+            </div>
+        </div>
+        <div class="optionsWarper">
+            <h4>Characters Used:</h4>
+            <div class="usedCaracters">
+                <div>
+                    <input onclick="regenerate()" type="checkbox" id="uppercase" checked>
+                    <label for="uppercase">ABC</label>
+                </div>
+                <div>
+                    <input onclick="regenerate()" type="checkbox" id="lowercase" checked>
+                    <label for="lowercase">abc</label>
+                </div>
+                <div>
+                    <input onclick="regenerate()" type="checkbox" id="numbers" checked>
+                    <label for="numbers">123</label>
+                </div>
+                <div>
+                    <input onclick="regenerate()" type="checkbox" id="specials" checked>
+                    <label for="specials">#$&</label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="infoSection">
+        <h1 class="title">What makes a password strong?</h1>
+        <div class="infoWarper">
+            <div class="info">
+                <img src="./icons/key-solid.svg">
+                <h3>Long</h3>
+                <p>The longer a password, the more secure it is. A strong password should be at least 10 characters
+                    long.</p>
+            </div>
+            <div class="info">
+                <img src="./icons/lock-solid.svg">
+                <h3>Complex</h3>
+                <p>Strong passwords use a combination of letters, numbers, cases, and symbols to form an unpredictable
+                    string of characters that doesn't resemble words or names.</p>
+            </div>
+            <div class="info">
+                <img src="./icons/fingerprint-solid.svg">
+                <h3>Unique</h3>
+                <p>A strong password should be unique to each account to reduce vulnerability in the event of a hack.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script src="./scripts.js"></script>
+</body>
+
+</html>
