@@ -6,4 +6,4 @@ A simple random password generator website. This tool allows you to:
 - Copy the generated password to your clipboard with a single click.
 
 ## Link to the Website
-[https://mohammedmmc.github.io/Random Password Generator](https://mohammedmmc.github.io/Random Password Generator)
+[https://mohammedmmc.github.io/Random-Password-Generator](https://mohammedmmc.github.io/Random-Password-Generator)
